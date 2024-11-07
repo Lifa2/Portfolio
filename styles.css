@@ -1,0 +1,575 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #353434; 
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/* this is the Dark background for the header */
+header {
+    background-color: #1a1a2e; 
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+/*  this is where you do your White texts for the header*/
+header nav ul li a {
+    color: #fff; 
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;   /*smoothly change the text color and transform size or position  with a gradual speed-up and slow-down effect*/
+}
+
+header nav ul li a:hover {
+    color: #ff6347; 
+    transform: scale(1.1); 
+}
+
+/* Home Section */
+.home {
+    background-image: url('https://i.pinimg.com/originals/91/ae/bc/91aebc3ee93aa94354fe18f50371e7fd.png');
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Makes the section take up the full screen */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Headshot Styling */
+.home .headshot {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 5px solid white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Soft shadow for the image */
+    transition: transform 0.3s ease; /* Smooth animation for hover effect */
+}
+
+/* Hover effect on headshot image */
+.home .headshot:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Heading Styling */
+.home h1 {
+    margin: 20px 0;
+    font-size: 3rem; /* Increased font size */
+    font-weight: bold;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Stronger text shadow */
+    letter-spacing: 2px; /* Adds space between the letters */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transition for color and transform */
+}
+
+/* Hover effect on main heading */
+.home h1:hover {
+    color: #ffed00; /* Change text color on hover */
+    transform: translateY(-5px); /* Slight upward movement */
+}
+
+/* Subheading Styling */
+.home h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: lighter;
+    text-transform: uppercase; /* Makes it look more professional */
+    letter-spacing: 1.5px; /* Adds space between the letters */
+    color: #f0f0f0; /* Lighter color for the subheading */
+    opacity: 0.85; /* Slight transparency */
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect on subheading */
+.home h2:hover {
+    opacity: 1;
+    color: #ffed00; /* Change color on hover */
+}
+
+/* Paragraph Styling */
+.home p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+}
+
+/* Hover effect on paragraph */
+.home p:hover {
+    opacity: 1; /* Make the paragraph fully opaque on hover */
+}
+
+/* Call to Action Button Styling */
+.home .cta-button {
+    background-color: #ff6347;
+   /*  padding: 10px 50px;*/
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: uppercase; /* Make the text all caps for a more professional look */
+    letter-spacing: 1px; /* Adds some spacing between the letters */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow around the button */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect on button */
+.home .cta-button:hover {
+    background-color: #ff4500;
+    transform: translateY(-5px); /* Button moves up slightly */
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3); /* Button shadow gets darker */
+}
+
+/* Media Query for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .home {
+        padding: 50px 20px;
+        height: auto;
+        text-align: center;
+    }
+
+    .home h1 {
+        font-size: 2.5rem;
+    }
+
+    .home h2 {
+        font-size: 1.5rem;
+    }
+
+    .home p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .home .cta-button {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+}
+
+/* About Section */
+/* Overall Styling for About Section */
+#about {
+    padding: 40px;
+    background-color: #f0f8ff; /* Sbackground-image: url('https://source.unsplash.com/1600x900/?technology,abstract'); /* Optional background image */
+    background-size: cover;
+    background-position: center;
+    color: #242121; 
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the section */
+    max-width: 900px;
+    margin: 40px auto;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8;
+    text-align: left;
+    overflow: hidden;
+}
+
+/* Heading Styling */
+#about h2 {
+    font-size: 36px;
+    color: #f06a11;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adds a slight shadow to the text for better readability */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for the heading */
+#about h2:hover {
+    color: #ff6347;
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Paragraph Styling */
+#about p {
+    font-size: 18px;
+    color: #242121; /* Lighter shade for the paragraphs */
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for paragraphs */
+#about p:hover {
+    color: #ff6347; /* Slight color change when hovered */
+}
+
+/* List styling for skills */
+#about ul {
+    margin-left: 20px;
+    font-size: 18px;
+    color: #242121;
+    list-style-type: disc;
+}
+
+/* Individual list items */
+#about ul li {
+    margin-bottom: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect for list items */
+#about ul li:hover {
+    color: #ff6347; /* Warm color on hover for list items */
+}
+
+/* Optional: Add an image border around the section if you choose to add an image */
+#about img {
+    border-radius: 50%; /* Optional: Round the image if you have a profile image */
+    border: 5px solid #fff; /* Adds a white border around the image */
+    margin-bottom: 30px;
+}
+
+
+
+/* General Styles */
+#skills {
+    background: #f4f7f6;
+    padding: 40px 0;
+    text-align: center;
+}
+
+#skills h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+/* Skills Container */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 4px;
+    justify-items: center;
+    align-items: center;
+}
+
+.skill {
+    background: linear-gradient(135deg, #6e7e95, #4a5964);
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.skill i {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.skill:hover i {
+    color: #ffcc00; /* Highlight icon color on hover */
+}
+
+.skill span {
+    font-size: 1.1rem;
+    color: #f9f9f9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #skills h2 {
+        font-size: 2rem;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .skill {
+        width: 120px;
+        font-size: 1rem;
+    }
+
+    .skill i {
+        font-size: 2.5rem;
+    }
+}
+
+
+/* Projects Section */
+.projects {
+    padding: 50px 10%;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+    font-family: 'Arial', sans-serif;
+}
+
+.project-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: white;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin-bottom: 30px;
+    max-width: 900px;
+    width: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.project-info {
+    padding: 20px;
+    text-align: left;
+    width: 100%;
+}
+
+.project-info h3 {
+    font-size: 28px;
+    color: #333;
+    margin: 0 0 15px;
+}
+
+.project-description {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.project-details {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.view-project-btn {
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.view-project-btn i {
+    margin-right: 8px;
+}
+
+.view-project-btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .project-image img {
+        max-height: 200px;
+    }
+}
+
+/* Contact Form */
+.contact {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    color: #1a1a2e;
+    margin-bottom: 30px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact input, .contact textarea {
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.contact input:focus, .contact textarea:focus {
+    border-color: #ff6347; /* Highlight border on focus */
+}
+
+.contact button {
+    background-color: #ff6347;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #ff4500; /* Button hover effect */
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a2e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #ff6347;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: white;
+}
+/* Certifications Section Styles */
+.certifications {
+    padding: 50px 20px;
+    background-color: #f0f4f7;
+}
+
+.certifications .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.certifications .section-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.certifications .section-description {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.certification-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.certification-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.certification-icon {
+    background-color: #3b82f6;
+    color: #fff;
+    padding: 20px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    font-size: 32px;
+    display: inline-block;
+}
+
+.certification-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+.certification-provider, .certification-date {
+    font-size: 14px;
+    color: #777;
+    margin: 5px 0;
+}
+
+.certification-description {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
