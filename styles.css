@@ -480,6 +480,47 @@ header nav ul li a:hover {
 .contact button:hover {
     background-color: #ff4500; /* Button hover effect */
 }
+/* Resume Section Styles */
+.resume {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.resume .section-title {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.resume .section-description {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.resume .resume-download {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.resume .cta-button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background-color: #5c6bc0;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.resume .cta-button:hover {
+    background-color: #3f51b5;
+}
+
+.resume .cta-button i {
+    margin-right: 10px;
+}
 
 /* Footer */
 footer {
